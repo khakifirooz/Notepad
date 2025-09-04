@@ -4,6 +4,7 @@ namespace Notepad
     {
         string fileName;
         bool saveFile;
+        ITools tools = new Tools();
         public Form1()
         {
             InitializeComponent();
@@ -109,6 +110,21 @@ namespace Notepad
         private void selectAllToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Body.SelectAll();
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Body.Text = tools.Undo();
+        }
+
+        private void redoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Body.Text = tools.Redo();
+        }
+
+        private void Body_KeyUp(object sender, KeyEventArgs e)
+        {
+            tools.Insert(Body.Text);
         }
     }
 }

@@ -55,6 +55,8 @@
             fontToolStripMenuItem = new ToolStripMenuItem();
             saveFileDialog1 = new SaveFileDialog();
             openFileDialog1 = new OpenFileDialog();
+            toolStripMenuItem3 = new ToolStripSeparator();
+            finedToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -70,6 +72,7 @@
             Body.TabIndex = 0;
             Body.WordWrap = false;
             Body.TextChanged += Body_TextChanged;
+            Body.KeyUp += Body_KeyUp;
             // 
             // menuStrip1
             // 
@@ -133,7 +136,7 @@
             // 
             // editToolStripMenuItem
             // 
-            editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cutToolStripMenuItem, copyToolStripMenuItem, pastToolStripMenuItem, toolStripMenuItem2, undoToolStripMenuItem, redoToolStripMenuItem, selectAllToolStripMenuItem, selectAllToolStripMenuItem1 });
+            editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cutToolStripMenuItem, copyToolStripMenuItem, pastToolStripMenuItem, toolStripMenuItem2, undoToolStripMenuItem, redoToolStripMenuItem, selectAllToolStripMenuItem, selectAllToolStripMenuItem1, toolStripMenuItem3, finedToolStripMenuItem });
             editToolStripMenuItem.Name = "editToolStripMenuItem";
             editToolStripMenuItem.Size = new Size(54, 26);
             editToolStripMenuItem.Text = "&Edit";
@@ -169,12 +172,14 @@
             undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             undoToolStripMenuItem.Size = new Size(224, 26);
             undoToolStripMenuItem.Text = "Undo";
+            undoToolStripMenuItem.Click += undoToolStripMenuItem_Click;
             // 
             // redoToolStripMenuItem
             // 
             redoToolStripMenuItem.Name = "redoToolStripMenuItem";
             redoToolStripMenuItem.Size = new Size(224, 26);
             redoToolStripMenuItem.Text = "Redo";
+            redoToolStripMenuItem.Click += redoToolStripMenuItem_Click;
             // 
             // selectAllToolStripMenuItem
             // 
@@ -236,6 +241,17 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
+            // toolStripMenuItem3
+            // 
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(221, 6);
+            // 
+            // finedToolStripMenuItem
+            // 
+            finedToolStripMenuItem.Name = "finedToolStripMenuItem";
+            finedToolStripMenuItem.Size = new Size(224, 26);
+            finedToolStripMenuItem.Text = "Fined";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -281,5 +297,7 @@
         private ToolStripMenuItem fontToolStripMenuItem;
         private SaveFileDialog saveFileDialog1;
         private OpenFileDialog openFileDialog1;
+        private ToolStripSeparator toolStripMenuItem3;
+        private ToolStripMenuItem finedToolStripMenuItem;
     }
 }
