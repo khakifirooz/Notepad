@@ -126,5 +126,23 @@ namespace Notepad
         {
             tools.Insert(Body.Text);
         }
+
+        private void finedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Fined form = new Fined(this);
+            form.Show();
+        }
+
+        public void Fined(string str)
+        {
+           int index = Body.Text.IndexOf(str,0);
+            if(index == -1)
+            {
+                MessageBox.Show("Not Found");
+            }
+            Body.SelectionStart = index;
+            Body.SelectionLength = str.Length;
+            Body.Focus();
+        }
     }
 }

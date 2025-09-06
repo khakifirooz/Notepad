@@ -46,6 +46,8 @@
             redoToolStripMenuItem = new ToolStripMenuItem();
             selectAllToolStripMenuItem = new ToolStripSeparator();
             selectAllToolStripMenuItem1 = new ToolStripMenuItem();
+            toolStripMenuItem3 = new ToolStripSeparator();
+            finedToolStripMenuItem = new ToolStripMenuItem();
             formatToolStripMenuItem = new ToolStripMenuItem();
             backColorToolStripMenuItem = new ToolStripMenuItem();
             blueToolStripMenuItem = new ToolStripMenuItem();
@@ -55,8 +57,6 @@
             fontToolStripMenuItem = new ToolStripMenuItem();
             saveFileDialog1 = new SaveFileDialog();
             openFileDialog1 = new OpenFileDialog();
-            toolStripMenuItem3 = new ToolStripSeparator();
-            finedToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -193,6 +193,18 @@
             selectAllToolStripMenuItem1.Text = "Select All";
             selectAllToolStripMenuItem1.Click += selectAllToolStripMenuItem1_Click;
             // 
+            // toolStripMenuItem3
+            // 
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(221, 6);
+            // 
+            // finedToolStripMenuItem
+            // 
+            finedToolStripMenuItem.Name = "finedToolStripMenuItem";
+            finedToolStripMenuItem.Size = new Size(224, 26);
+            finedToolStripMenuItem.Text = "Fined";
+            finedToolStripMenuItem.Click += finedToolStripMenuItem_Click;
+            // 
             // formatToolStripMenuItem
             // 
             formatToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { backColorToolStripMenuItem, forColerToolStripMenuItem, fontToolStripMenuItem });
@@ -240,17 +252,6 @@
             // openFileDialog1
             // 
             openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // toolStripMenuItem3
-            // 
-            toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(221, 6);
-            // 
-            // finedToolStripMenuItem
-            // 
-            finedToolStripMenuItem.Name = "finedToolStripMenuItem";
-            finedToolStripMenuItem.Size = new Size(224, 26);
-            finedToolStripMenuItem.Text = "Fined";
             // 
             // Form1
             // 
