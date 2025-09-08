@@ -135,14 +135,42 @@ namespace Notepad
 
         public void Fined(string str)
         {
-           int index = Body.Text.IndexOf(str,0);
-            if(index == -1)
+            int index = Body.Text.IndexOf(str, 0);
+            if (index == -1)
             {
                 MessageBox.Show("Not Found");
             }
             Body.SelectionStart = index;
             Body.SelectionLength = str.Length;
             Body.Focus();
+        }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            Body.Font = fontDialog1.Font;
+        }
+
+        private void forColerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            Body.ForeColor = colorDialog1.Color;
+        }
+
+        private void redToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Body.BackColor = Color.Red;
+        }
+
+
+        private void blueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Body.BackColor = Color.Blue;
+        }
+
+        private void greenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Body.BackColor = Color.Green;
         }
     }
 }

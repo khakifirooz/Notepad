@@ -57,6 +57,8 @@
             fontToolStripMenuItem = new ToolStripMenuItem();
             saveFileDialog1 = new SaveFileDialog();
             openFileDialog1 = new OpenFileDialog();
+            fontDialog1 = new FontDialog();
+            colorDialog1 = new ColorDialog();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -144,64 +146,64 @@
             // cutToolStripMenuItem
             // 
             cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            cutToolStripMenuItem.Size = new Size(224, 26);
+            cutToolStripMenuItem.Size = new Size(165, 26);
             cutToolStripMenuItem.Text = "Cut";
             cutToolStripMenuItem.Click += cutToolStripMenuItem_Click;
             // 
             // copyToolStripMenuItem
             // 
             copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            copyToolStripMenuItem.Size = new Size(224, 26);
+            copyToolStripMenuItem.Size = new Size(165, 26);
             copyToolStripMenuItem.Text = "Copy";
             copyToolStripMenuItem.Click += copyToolStripMenuItem_Click;
             // 
             // pastToolStripMenuItem
             // 
             pastToolStripMenuItem.Name = "pastToolStripMenuItem";
-            pastToolStripMenuItem.Size = new Size(224, 26);
+            pastToolStripMenuItem.Size = new Size(165, 26);
             pastToolStripMenuItem.Text = "paste";
             pastToolStripMenuItem.Click += pastToolStripMenuItem_Click;
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(221, 6);
+            toolStripMenuItem2.Size = new Size(162, 6);
             // 
             // undoToolStripMenuItem
             // 
             undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            undoToolStripMenuItem.Size = new Size(224, 26);
+            undoToolStripMenuItem.Size = new Size(165, 26);
             undoToolStripMenuItem.Text = "Undo";
             undoToolStripMenuItem.Click += undoToolStripMenuItem_Click;
             // 
             // redoToolStripMenuItem
             // 
             redoToolStripMenuItem.Name = "redoToolStripMenuItem";
-            redoToolStripMenuItem.Size = new Size(224, 26);
+            redoToolStripMenuItem.Size = new Size(165, 26);
             redoToolStripMenuItem.Text = "Redo";
             redoToolStripMenuItem.Click += redoToolStripMenuItem_Click;
             // 
             // selectAllToolStripMenuItem
             // 
             selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            selectAllToolStripMenuItem.Size = new Size(221, 6);
+            selectAllToolStripMenuItem.Size = new Size(162, 6);
             // 
             // selectAllToolStripMenuItem1
             // 
             selectAllToolStripMenuItem1.Name = "selectAllToolStripMenuItem1";
-            selectAllToolStripMenuItem1.Size = new Size(224, 26);
+            selectAllToolStripMenuItem1.Size = new Size(165, 26);
             selectAllToolStripMenuItem1.Text = "Select All";
             selectAllToolStripMenuItem1.Click += selectAllToolStripMenuItem1_Click;
             // 
             // toolStripMenuItem3
             // 
             toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(221, 6);
+            toolStripMenuItem3.Size = new Size(162, 6);
             // 
             // finedToolStripMenuItem
             // 
             finedToolStripMenuItem.Name = "finedToolStripMenuItem";
-            finedToolStripMenuItem.Size = new Size(224, 26);
+            finedToolStripMenuItem.Size = new Size(165, 26);
             finedToolStripMenuItem.Text = "Fined";
             finedToolStripMenuItem.Click += finedToolStripMenuItem_Click;
             // 
@@ -216,38 +218,43 @@
             // 
             backColorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { blueToolStripMenuItem, greenToolStripMenuItem, redToolStripMenuItem });
             backColorToolStripMenuItem.Name = "backColorToolStripMenuItem";
-            backColorToolStripMenuItem.Size = new Size(172, 26);
+            backColorToolStripMenuItem.Size = new Size(224, 26);
             backColorToolStripMenuItem.Text = "BackColor";
             // 
             // blueToolStripMenuItem
             // 
             blueToolStripMenuItem.Name = "blueToolStripMenuItem";
-            blueToolStripMenuItem.Size = new Size(138, 26);
+            blueToolStripMenuItem.Size = new Size(224, 26);
             blueToolStripMenuItem.Text = "blue";
+            blueToolStripMenuItem.Click += blueToolStripMenuItem_Click;
             // 
             // greenToolStripMenuItem
             // 
             greenToolStripMenuItem.Name = "greenToolStripMenuItem";
-            greenToolStripMenuItem.Size = new Size(138, 26);
+            greenToolStripMenuItem.Size = new Size(224, 26);
             greenToolStripMenuItem.Text = "green";
+            greenToolStripMenuItem.Click += greenToolStripMenuItem_Click;
             // 
             // redToolStripMenuItem
             // 
             redToolStripMenuItem.Name = "redToolStripMenuItem";
-            redToolStripMenuItem.Size = new Size(138, 26);
+            redToolStripMenuItem.Size = new Size(224, 26);
             redToolStripMenuItem.Text = "red";
+            redToolStripMenuItem.Click += redToolStripMenuItem_Click;
             // 
             // forColerToolStripMenuItem
             // 
             forColerToolStripMenuItem.Name = "forColerToolStripMenuItem";
-            forColerToolStripMenuItem.Size = new Size(172, 26);
+            forColerToolStripMenuItem.Size = new Size(224, 26);
             forColerToolStripMenuItem.Text = "ForColor";
+            forColerToolStripMenuItem.Click += forColerToolStripMenuItem_Click;
             // 
             // fontToolStripMenuItem
             // 
             fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            fontToolStripMenuItem.Size = new Size(172, 26);
+            fontToolStripMenuItem.Size = new Size(224, 26);
             fontToolStripMenuItem.Text = "Font";
+            fontToolStripMenuItem.Click += fontToolStripMenuItem_Click;
             // 
             // openFileDialog1
             // 
@@ -260,6 +267,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(Body);
             Controls.Add(menuStrip1);
+            ImeMode = ImeMode.Disable;
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "notepad";
@@ -300,5 +308,7 @@
         private OpenFileDialog openFileDialog1;
         private ToolStripSeparator toolStripMenuItem3;
         private ToolStripMenuItem finedToolStripMenuItem;
+        private FontDialog fontDialog1;
+        private ColorDialog colorDialog1;
     }
 }
